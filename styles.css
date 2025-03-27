@@ -1,0 +1,57 @@
+body {
+    background-color: black;
+    color: red;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid red;
+    width: 0;
+    animation: typing 3s steps(40, end) forwards, glitch 1.5s infinite;
+}
+
+.link-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: red;
+    border: 2px solid red;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.link-button:hover {
+    background: red;
+    color: black;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px red; }
+    50% { text-shadow: -2px -2px red; }
+    100% { text-shadow: 2px 2px red; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
