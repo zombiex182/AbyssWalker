@@ -5,7 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (i < bioText.length) {
             document.getElementById("bio-text").innerHTML += bioText.charAt(i);
             i++;
-            setTimeout(typeWriter, 50);
+            setTimeout(typeWriter, 40); // Faster typing speed
+        } else {
+            setTimeout(() => {
+                document.getElementById("bio-text").innerHTML = ""; // Clear text
+                i = 0; // Restart typing
+                typeWriter();
+            }, 2000); // Pause before restarting
         }
     }
     typeWriter();
