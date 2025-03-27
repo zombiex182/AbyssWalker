@@ -12,11 +12,21 @@ body {
 }
 
 .container {
+    width: 90%;
+    max-width: 600px;
     animation: fadeIn 2s ease-in-out;
 }
 
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid red;
+    margin-bottom: 10px;
+}
+
 h1 {
-    font-size: 24px;
+    font-size: 4vw; 
     text-transform: uppercase;
     white-space: nowrap;
     overflow: hidden;
@@ -25,10 +35,15 @@ h1 {
     animation: typing 3s steps(40, end) forwards, glitch 1.5s infinite;
 }
 
+.links {
+    margin-top: 20px;
+}
+
 .link-button {
     display: inline-block;
-    margin-top: 20px;
+    margin: 5px;
     padding: 10px 20px;
+    font-size: 3vw;
     color: red;
     border: 2px solid red;
     text-decoration: none;
@@ -54,4 +69,14 @@ h1 {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 6vw; 
+    }
+    .link-button {
+        font-size: 4vw;
+    }
 }
